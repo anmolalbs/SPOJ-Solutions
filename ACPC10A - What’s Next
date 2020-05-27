@@ -1,0 +1,72 @@
+#include <bits/stdc++.h> 
+#define pb push_back
+#define mp make_pair 
+#define fr first
+#define sc second
+#define MOD 1000000007
+#define N 1000000
+#define len(x) x.size()
+#define min3(a, b, c) min(a, min(b, c))
+#define max3(a, b, c) max(a, max(b, c))
+#define all(v) v.begin(), v.end()
+#define alla(a,n) a, a + n
+#define int long long
+using namespace std;
+ 
+typedef long long ll;
+typedef unsigned long long ull;
+typedef pair<ll, ll> pll;
+typedef vector<ll> vll;
+typedef vector<pll> vpll;
+typedef vector<vll> vvll;
+typedef vector<string> vs;
+
+
+void solve()
+{
+    while(true){
+        int a,b,c;
+        cin>>a>>b>>c;
+
+        if(a==0 && b==0 && c==0)
+            break;
+        
+        if(c-b == b-a && b-a !=0){
+            cout<<"AP"<<" "<<c+(c-b)<<endl;
+            continue;
+        }
+        double ratio1=double(b)/double(a);
+        //cout<<ratio1;
+        //double ratio2=c/b;
+        double ratio2=double(c)/double(b);
+
+        //cout<<ratio2;
+
+
+        if(ratio1 == ratio2){
+            cout<<"GP"<<" "<< c*ratio1 <<endl;
+            continue;
+        }
+    }   
+
+}
+
+
+int32_t main() {
+
+    #ifndef ONLINE_JUDGE
+    freopen("input.txt", "r", stdin) ;
+    freopen("output.txt", "w", stdout) ;
+    #endif
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL) ; cout.tie(NULL) ;
+    //int t;
+    //cin>>t ;
+ 
+    //while( t!=0 ) {
+       solve();
+      // }
+
+    return 0 ;
+
+}
